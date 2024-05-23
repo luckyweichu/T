@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>現在時間</title>
+    <link rel="stylesheet" href="/stye.css">
+
+<!-- GOGLE字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+<!-- Bootstrap系列 -->
+    <link rel="stylesheet" href="/bootstrap-5.1.1-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.1.1-dist/js/bootstrap.min.js"></script>
+
+</head>
+<body class="bg-dark container-{breakpoint}">
+    <div class="p-3 mb-2 text-dark">
+        <div class="row input-group-text">        
+            <div id="time" class="text"></div>
+            <div id="" class="text today"></div>
+        </div>
+    </div>
+
+
+    <script>
+        setInterval(()=>{
+            const time = document.querySelector("#time");
+            let date = new Date();
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+            let day_APnight = "AM";
+            
+            if(hours > 12){
+                day_APnight = "PM";
+                hours = hours - 12;
+            }
+            if(hours < 10){
+                hours = "0" + hours;
+            }
+            if(minutes < 10){
+                minutes = "0" + minutes;
+            }
+            if(seconds < 10){
+                seconds = "0" + seconds;
+            }
+
+            time.textContent = hours + ":" + minutes + ":" + seconds + day_APnight;
+            function showTime(){
+	        date=new Date();
+
+}
+        });
+    </script>
+</body>
+</html>

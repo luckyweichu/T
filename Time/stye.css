@@ -1,0 +1,10 @@
+*{
+    font-family: "Bowlby One SC", sans-serif;
+    font-style: normal;
+}
+
+.text {
+    font-size: calc(1rem + 10.5vw);
+    font-weight: 900;
+    letter-spacing: 6px;
+}
